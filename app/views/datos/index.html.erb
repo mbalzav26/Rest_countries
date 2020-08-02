@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de Paises</h1>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Nombre</th>
+      <th>Continente</th>
+      <th>Capital</th>
+      <th>Población</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @datos.each do |dato| %>
+      <tr>
+        <td><%= dato['name'] %></td>
+        <td><%= dato['region'] %></td>
+        <td><%= dato['capital'] %></td>
+        <td><%= dato['population'] %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
